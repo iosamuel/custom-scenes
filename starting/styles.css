@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: ND_LOGOS_REGULAR;
+  src: url("https://github.com/iosamuel/iosamuel/blob/vue/src/assets/fonts/ND_LOGOS_REGULAR.ttf?raw=true");
+  font-display: swap;
+}
+
 body {
   background-color: #222222;
   background: repeating-linear-gradient(
@@ -38,7 +44,7 @@ a {
 .blue a {
   font-size: 1.5em;
   color: white;
-  font-family: Iceland;
+  font-family: ND_LOGOS_REGULAR;
   animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
