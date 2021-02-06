@@ -1,0 +1,144 @@
+body {
+  background-color: #222222;
+  background: repeating-linear-gradient(
+      45deg,
+      #2b2b2b 0%,
+      #2b2b2b 10%,
+      #222222 0%,
+      #222222 50%
+    )
+    0 / 30px 30px;
+}
+
+#container {
+  width: 100%;
+  margin: auto;
+}
+
+/*Neon*/
+p {
+  text-align: center;
+  font-size: 7em;
+  margin: 20px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.blue a {
+  font-size: 1.5em;
+  color: white;
+  font-family: Iceland;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.orange a {
+  color: white;
+  font-family: Audiowide;
+  animation: neon5 1.5s ease-in-out infinite alternate;
+}
+
+p img {
+  width: 400px;
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+      0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  }
+}
+
+@keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff9900,
+      0 0 70px #ff9900, 0 0 80px #ff9900, 0 0 100px #ff9900, 0 0 150px #ff9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff9900,
+      0 0 35px #ff9900, 0 0 40px #ff9900, 0 0 50px #ff9900, 0 0 75px #ff9900;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.cube {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  animation: rotate 10s linear infinite;
+  transform-origin: center center;
+  margin: 0 auto;
+  top: 80px;
+}
+
+.side {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+  background: linear-gradient(-45deg, #2b2b2b, #228dff, #0f437a);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.side::before {
+  content: " ";
+  background-image: url(https://raw.githubusercontent.com/iosamuel/iosamuel/vue/src/assets/images/isotipo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.back {
+  transform: translateZ(-75px) rotateX(180deg);
+}
+
+.left {
+  transform: translateX(-75px) rotateY(90deg);
+}
+
+.right {
+  transform: translateX(75px) rotateY(90deg);
+}
+
+.top {
+  transform: translateY(-75px) rotateX(90deg);
+}
+
+.bottom {
+  transform: translateY(75px) rotateX(270deg);
+}
+
+.front {
+  transform: translateZ(75px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
