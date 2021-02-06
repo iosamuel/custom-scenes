@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: ND_LOGOS_REGULAR;
-  src: url("https://github.com/iosamuel/iosamuel/blob/vue/src/assets/fonts/ND_LOGOS_REGULAR.ttf?raw=true");
+  src: url("../fonts/ND_LOGOS_REGULAR.ttf");
   font-display: swap;
 }
 
