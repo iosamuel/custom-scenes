@@ -8,6 +8,9 @@ body {
       #222222 50%
     )
     0 / 30px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #container {
@@ -83,18 +86,18 @@ p img {
 .cube {
   transform-style: preserve-3d;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   animation: rotate 10s linear infinite;
   transform-origin: center center;
   margin: 0 auto;
-  top: 80px;
+  top: 100px;
 }
 
 .side {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   opacity: 1;
   background: linear-gradient(-45deg, #2b2b2b, #228dff, #0f437a);
   background-size: 400% 400%;
@@ -111,27 +114,27 @@ p img {
 }
 
 .back {
-  transform: translateZ(-75px) rotateX(180deg);
+  transform: translateZ(-150px) rotateX(180deg);
 }
 
 .left {
-  transform: translateX(-75px) rotateY(90deg);
+  transform: translateX(-150px) rotateY(90deg);
 }
 
 .right {
-  transform: translateX(75px) rotateY(90deg);
+  transform: translateX(150px) rotateY(90deg);
 }
 
 .top {
-  transform: translateY(-75px) rotateX(90deg);
+  transform: translateY(-150px) rotateX(90deg);
 }
 
 .bottom {
-  transform: translateY(75px) rotateX(270deg);
+  transform: translateY(150px) rotateX(270deg);
 }
 
 .front {
-  transform: translateZ(75px);
+  transform: translateZ(150px);
 }
 
 @keyframes rotate {
